@@ -1,0 +1,3 @@
+for internal storage 
+username= ilihas
+password=123

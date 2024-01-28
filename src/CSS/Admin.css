@@ -1,0 +1,47 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.Container {
+
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LoginBox {
+
+    border: 2px solid black;
+    padding: 20px;
+    height: 40vh;
+    width: 30vw;
+    border-radius: 10px;
+}
+
+input {
+    margin: 5px 0px;
+    border-radius: 10px;
+    margin-left: 6px;
+    ;
+}
+
+.details {
+    position: relative;
+    top: 20%;
+}
+
+label {
+
+    font-weight: bold;
+    margin-right: 13px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 10px;
+}

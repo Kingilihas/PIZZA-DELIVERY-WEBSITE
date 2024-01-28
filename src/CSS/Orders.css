@@ -1,0 +1,14 @@
+.orders {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    /* background-color: #2e5daa; */
+    height: 100vh;
+}
+
+.order {
+    padding: 30px;
+
+
+}

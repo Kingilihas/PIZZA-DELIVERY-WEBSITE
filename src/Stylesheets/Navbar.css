@@ -1,0 +1,13 @@
+a {
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+.navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+
+}
