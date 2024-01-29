@@ -1,0 +1,5 @@
+![MainEntry](https://github.com/Kingilihas/PIZZA-DELIVERY-WEBSITE/assets/130922535/70aa9c48-8810-4a8a-98d4-e6090da9b088)
+![orders](https://github.com/Kingilihas/PIZZA-DELIVERY-WEBSITE/assets/130922535/297c9135-38b9-4370-ab00-090dd5fff282)
+![admin login](https://github.com/Kingilihas/PIZZA-DELIVERY-WEBSITE/assets/130922535/6e08db39-3119-4945-860f-bdebc97a1458)
+![Admin](https://github.com/Kingilihas/PIZZA-DELIVERY-WEBSITE/assets/130922535/3f73b253-db67-48b4-9d12-bfa550b62e3a)
+![all the orders on atlas](https://github.com/Kingilihas/PIZZA-DELIVERY-WEBSITE/assets/130922535/ea4a8e6c-d4a5-4b2b-9423-f79676608808)
