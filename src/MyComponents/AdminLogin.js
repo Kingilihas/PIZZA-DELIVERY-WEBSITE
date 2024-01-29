@@ -20,18 +20,18 @@ const AdminLogin = () => {
 
         const jsonobj = JSON.stringify(newobj);
 
-        try {
-            const response = await fetch('http://localhost:5000/api/admin', {
 
-                method: 'POST',
-                mode: 'cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                    origin: 'http://localhost:5000/'
-                },
-                body: jsonobj
+        await fetch('http://localhost:5000/api/admin', {
 
-            })
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+                origin: 'http://localhost:5000/'
+            },
+            body: jsonobj
+
+        }).then(async (response) => {
 
             const parsed = await response.json();
 
@@ -43,10 +43,10 @@ const AdminLogin = () => {
                 alert('Invalid User')
             }
 
-
-        } catch (err) {
+        }).catch((err) => {
+            alert(" Incorrect Details ")
             console.log("The Error is ", err)
-        }
+        })
 
 
 

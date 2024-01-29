@@ -19,12 +19,29 @@ mongoose.connect(db).then(() => {
 })
 
 
-
 app.listen(5000, () => {
     console.log("app listening on port 5000")
 });
 
 app.use(express.json());
+
+
+app.use('/api/admin', async (req, res, next) => {
+
+    const uname = req.body.uname
+    const pass = req.body.pass
+
+    console.log(uname.length, pass.length)
+
+
+    if (uname.length < 5)
+        res.status(400).send(" Username is wrong ");
+
+    else if (pass.length < 5)
+        res.status(400).send(" Password is wrong ");
+    else
+        next()
+})
 
 
 const kittySchema = new mongoose.Schema({
@@ -267,17 +284,25 @@ app.post('/api/order', async (req, res) => {
 app.post('/api/admin', async (req, res) => {
 
 
+    try {
 
-    const uname = req.body.uname;
-    const password = req.body.pass;
+        const uname = req.body.uname;
+        const password = req.body.pass;
 
-    const admins = await doc4.findOne({ UserName: uname })
+        const admin = await doc4.findOne({ UserName: uname })
+
+        if (!admin) {
+            res.status(400).send({ found: false })
+
+        } else
+            res.status(200).send({ found: true })
 
 
-    if (!admins)
-        res.status(400).send({ found: false })
-    else
-        res.status(200).send({ found: true })
+
+    } catch (err) {
+
+        res.status(400).send("Unauthorized acess ")
+    }
 
 
 })
