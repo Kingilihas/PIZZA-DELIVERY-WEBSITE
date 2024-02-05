@@ -1,9 +1,14 @@
 import React from 'react'
 import '../CSS/Admin.css'
 
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-const AdminLogin = () => {
+const AdminLogin = (props) => {
+
+    const { setbutton } = props;
+
+
+
 
     let navigate = useNavigate();
 
@@ -37,6 +42,7 @@ const AdminLogin = () => {
 
             if (parsed.found) {
                 navigate('/actualadmin');
+
             }
             else {
 

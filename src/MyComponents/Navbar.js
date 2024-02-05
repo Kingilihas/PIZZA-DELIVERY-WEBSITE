@@ -1,7 +1,27 @@
 import React from 'react'
 import '../Stylesheets/Navbar.css';
-import { Link } from 'react-router-dom';
-const Navbar = () => {
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+const Navbar = (props) => {
+
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        navigate('/login')
+    }
+
+    const handleSignup = (e) => {
+        e.preventDefault();
+        navigate('/signup')
+    }
+
+    const location = useLocation();
+    const { pathname } = location;
+
+    console.log(pathname)
+
+    const { addbutton } = props;
+    console.log(addbutton)
     return (
 
 
@@ -26,10 +46,11 @@ const Navbar = () => {
 
 
                     </ul>
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    {pathname !== '/Admin' ? <form className="d-flex" role="search">
+                        {/* <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" /> */}
+                        {pathname !== '/login' && <button className="btn btn-outline-success" onClick={handleLogin}> Login </button>}
+                        {pathname !== '/signup' && <button className="btn btn-outline-danger mx-2" onClick={handleSignup}> Sign Up </button>}
+                    </form> : ""}
                 </div>
             </div >
         </nav >
